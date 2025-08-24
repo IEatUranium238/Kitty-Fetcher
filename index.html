@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Kitty Fetcher</title>
+</head>
+
+<body>
+  <main class="main-container">
+    <h1>Kitty Fetcher</h1>
+
+    <div class="image-result">
+      <p id="loadingMessage" style="display:none;" aria-live="polite" aria-atomic="true">Loading image...</p>
+      <img src="" id="imgResult" alt="Random cat" />
+    </div>
+
+    <p id="statusLine" class="text-status" aria-live="polite" aria-atomic="true"></p>
+
+    <div class="controls col">
+      <div class="main-controls row">
+        <button id="refreshBtn">Give me a cat</button>
+        <button id="downloadBtn">Download this cat</button>
+        <button id="applyBtn">Apply settings to this image</button>
+      </div>
+
+      <div class="image-settings col">
+        <h2>Settings</h2>
+
+        <h3>Tags</h3>
+        <div class="col">
+          <label for="tagsInput">Tags:</label>
+          <input type="text" id="tagsInput" placeholder="Enter tags here separated by comma" />
+
+        </div>
+
+        <h3>Text</h3>
+        <div class="col">
+          <label for="textTxt">Text on image:</label>
+          <input type="text" id="textTxt" placeholder="Text on image" />
+
+          <label for="sizeTxt">Text size:</label>
+          <input type="number" id="sizeTxt" placeholder="Text size" min="1" />
+
+          <label for="colorTxt">Text color:</label>
+          <input type="text" id="colorTxt" placeholder="Text color name" />
+
+          <label for="fontSelect">Font:</label>
+          <select name="fonts" id="fontSelect" class="dropdown">
+            <option value="Impact">Impact</option>
+            <option value="Andale Mono">Andale Mono</option>
+            <option value="Arial">Arial</option>
+            <option value="Arial Black">Arial Black</option>
+            <option value="Comic Sans MS">Comic Sans MS</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Webdings">Webdings</option>
+          </select>
+
+        </div>
+
+        <h3>Filters</h3>
+        <div class="col">
+          <div class="col">
+            <label for="filtersSelect">Choose a filter:</label>
+            <select name="filters" id="filtersSelect" class="dropdown">
+              <option value="none">No filter</option>
+              <option value="mono">Mono</option>
+              <option value="negative">Negative</option>
+              <option value="custom">Custom</option>
+            </select>
+
+            <div class="col custom-filter" id="customFilter">
+              <label for="brightness">Brightness:</label>
+              <input type="number" id="brightness" placeholder="Brightness" />
+
+              <label for="lightness">Lightness:</label>
+              <input type="number" id="lightness" placeholder="Lightness" />
+
+              <label for="saturation">Saturation:</label>
+              <input type="number" id="saturation" placeholder="Saturation" />
+
+              <label for="hue">Hue:</label>
+              <input type="number" id="hue" placeholder="Hue" />
+
+              <label for="red">Red:</label>
+              <input type="number" id="red" placeholder="Red" />
+
+              <label for="green">Green:</label>
+              <input type="number" id="green" placeholder="Green" />
+
+              <label for="blue">Blue:</label>
+              <input type="number" id="blue" placeholder="Blue" />
+            </div>
+
+          </div>
+        </div>
+
+        <h3>Other</h3>
+        <label for="GifCheckbox">
+          <input class="checkbox" id="GifCheckbox" type="checkbox" />
+          Return gifs only
+        </label>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/ui/CustomSelectHandeler.js"></script>
+</body>
+
+</html>
