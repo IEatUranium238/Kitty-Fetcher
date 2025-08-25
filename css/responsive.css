@@ -13,3 +13,12 @@
     width: 100%;
   }
 }
+
+@media (max-width: 800px) {
+  .main-controls {
+    flex-direction: column;
+  }
+  .main-controls > button {
+    width: 100%;
+  }
+}
