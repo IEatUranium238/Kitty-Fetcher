@@ -12,6 +12,8 @@ import { isValidColor } from "../utils/colorUtils.js";
  * @param {string} params.filterValue - Filter to apply to the image ("none", "mono", "negative", "custom").
  * @param {boolean} params.isGifChecked - Whether to request a GIF image.
  * @param {Array} params.customFilters - Array with values for custom filter.
+ * @param {number} params.xSize - X size of a image.
+ * @param {number} params.ySize - Y size of a image.
  * @param {boolean} params.isModification - Whether this is a modification of an existing image.
  * @param {string} params.originalID - The ID of the original image (for modification).
  * @param {function} params.setStatus - Function to update status messages.
@@ -26,6 +28,8 @@ export async function fetchCatImageURL({
   filterValue,
   isGifChecked,
   customFilters,
+  xSize,
+  ySize,
   isModification,
   originalID,
   setStatus,
@@ -119,6 +123,16 @@ export async function fetchCatImageURL({
 
   // Add font
   queryParams.push(`font=${encodeURIComponent(fontValue.value)}`);
+
+  // Add custom image size if entered
+
+  if (xSize.value) {
+    queryParams.push(`width=${encodeURIComponent(xSize.value)}`)
+  }
+  if (ySize.value) {
+    queryParams.push(`height=${encodeURIComponent(ySize.value)}`)
+  }
+
 
   // Request JSON response
   queryParams.push("json=true");

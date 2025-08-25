@@ -16,3 +16,6 @@ export const hue = document.getElementById("hue");
 export const red = document.getElementById("red");
 export const green = document.getElementById("green");
 export const blue = document.getElementById("blue");
+
+export const xSize = document.getElementById("xSize");
+export const ySize = document.getElementById("ySize");

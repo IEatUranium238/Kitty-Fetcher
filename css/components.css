@@ -12,6 +12,21 @@
   transition: transform 0.3s ease;
 }
 
+.img-ico-container {
+  height: 3em;
+  width: 3em;
+}
+
+.img-ico-container > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.header-name {
+  align-items: center;
+}
+
 .text-status {
   text-align: center;
   margin-bottom: 1rem;
