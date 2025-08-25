@@ -16,7 +16,7 @@ Kitty Fetcher is a simple and fun web app that lets you fetch adorable cat photo
 
 1. Open the [website](https://ieaturanium238.github.io/Kitty-Fetcher/) in any modern browser.  
 2. Use the controls to fetch a new cat image or GIF.  
-3. Customize the image with text, filters, or resize it using the provided settings.  
+3. Customize the image with text, filters using the provided settings.  
 4. Filter images based on tags for tailored cat content.  
 5. Download your customized kitty image with one click.
 
