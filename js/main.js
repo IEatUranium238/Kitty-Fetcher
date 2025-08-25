@@ -58,6 +58,8 @@ async function updateCatImage(isModify) {
       filterValue: dom.filterSelect.value,
       isGifChecked: dom.gifCheckbox.checked,
       customFilters: customFiltersArr,
+      xSize: dom.xSize,
+      ySize: dom.ySize,
       isModification: isModify,
       originalID: currentCatID,
       setStatus,
