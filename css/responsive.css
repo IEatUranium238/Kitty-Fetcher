@@ -12,6 +12,12 @@
     flex: none;
     width: 100%;
   }
+
+  .headerButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 800px) {
